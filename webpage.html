@@ -1,0 +1,175 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src = "keys.js"></script>
+
+<title>EyeMusic</title>
+<meta name="keywords" content="virtual piano, piano online, online piano">
+<meta name="description" content="This virtual piano keyboard can play single notes or chords with computer keyboard or mouse (seven octaves).">
+
+<style>
+body { margin-bottom:1em; font-family: Verdana; }
+
+#structure { margin:0; border-collapse: collapse; width:100%; }
+#structure td { vertical-align: top; padding-left: 1em; padding-right: 1em; }
+#lewakolumna { }
+#prawakolumna { width: 300px; }
+#skyscraper { overflow: hidden; max-width: 300px; box-shadow: 0 0 1em 0.5em #bbbbbb; background-color: #bbbbbb; margin-top: 2em; }
+
+nav { float: left; margin:0; margin-right: 2em; }
+nav a { white-space: nowrap; font-family: Verdana; }
+header { margin:0; text-align: left; font-family: "Times New Roman"; line-height: 1;  }
+header h1 { margin:0;  color: #191970; }
+header h2 { margin-top:0; margin-bottom:0; font-weight:bold; font-size: 120%; color: #777777; }
+
+#pianoessence { }
+#pianolessadvanced { max-width: 732px; margin-left: auto; margin-right: auto; }
+#cookies { color: #444444; text-align: center; margin-top: 2em; margin-left: auto; margin-right: auto; }
+#reklama1 { max-width: 732px; margin-top: 0; margin-bottom: 1em; margin-left: auto; margin-right: auto; }
+#reklama1 ins { text-align: center; }
+
+
+main { font-family: Verdana; margin-left: 10%; margin-right: 10%; }
+main h2 { font-family: "Times New Roman"; }
+</style>
+
+<style>
+.whitekeybutton { opacity: 0.5; background: white; background: linear-gradient(lightgray,white); box-shadow: inset 1px 1px 6px 0px black, inset -1px -1px 6px 0px black, 1px 0px gray, -1px 0px gray; }.whitekeybutton:hover { opacity: 1; background: #eeeeee; box-shadow: inset 1px 1px 7px 0px rgba(0,0,0,1), inset -1px -1px 7px 0px rgba(0,0,0,1), 1px 0px gray, -1px 0px gray; } .blackkeybutton { background: #111; background: linear-gradient(#111, #444); }.blackkeybutton:hover { background: #555; }button.playback { background: linear-gradient(#eeeeee, #cccccc); height: 2em; font-weight: bold; font-family: Verdana; border: 1px solid darkgray; border-radius: 0.5em; cursor: pointer; margin: 0; outline: none;}button.playback:hover { box-shadow: inset 0px 0px 1em 0px #eeeeee; }button.chord { background: linear-gradient(#fafafa, #dddddd); height: 2em; font-family: Arial; border: 1px solid darkgray; border-radius: 0.5em; cursor: pointer; margin: 0; outline: none;} button.chord:hover { box-shadow: inset 0px 0px 1em 2em #eeeeee; }.przycisk{ cursor: pointer; display: inline-block; margin: 0.5em; padding: 4px; border: 1px solid gray; border-radius: 4px; background: #eeeeee; font-family: Arial; font-size: 100%; line-height: 1;}.przycisk:hover { background: #fafafa; }</style><style id="noselectstyle">.noselect { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style></head><body>
+
+
+
+<div id="structurecontainer"><table id="structure"><tbody><tr><td id="lewakolumna">
+
+<header>
+<h1 style = "text-align:center" color: red>Eye Music - Online Piano for the Visually Impaired</h1>
+<h2 style="text-align:center">Let your voice be your melody!</h2>
+</header>
+<div id="pianoessence">
+ <div id="pianolessadvanced"><div id="pianokeyboardpanel"><div id="octavesPanel" onmouseleave="this.style.display=&quot;none&quot;;" onclick="this.style.display=&quot;none&quot;;" class="noselect" style="display: none; position: absolute; border: thick groove lightgray; border-radius: 0.5em; padding: 0.5em; background: rgb(247, 247, 247); z-index: 10; user-select: none;"><button id="loweroctavebutton" onclick="loweroctave();" class="noselect" style="display: block; margin: 0.75em; width: 12em; cursor: pointer; user-select: none;">add lower octave</button><button id="higheroctavebutton" onclick="higheroctave();" class="noselect" style="display: block; margin: 0.75em; width: 12em; cursor: pointer; user-select: none;">add higher octave</button><button id="rlo" onclick="removelowestoctave();" class="noselect" style="display: block; margin: 0.75em; width: 12em; cursor: pointer; user-select: none;">remove lowest octave</button><button id="rho" onclick="removehighestoctave();" class="noselect" style="display: block; margin: 0.75em; width: 12em; cursor: pointer; user-select: none;">remove highest octave</button></div>  <button id="donatebutton" class="przycisk noselect" onclick="window.open(&quot;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=USFQTTFZ7WYJ4&quot;);" style="display: none; user-select: none;">donate</button><div id="keyboardspot" class="noselect" style="clear: both; margin-top: 0.5em; user-select: none;"><div ontouchstart="preventZoom(event);touchdevice();" ontouchmove="event.preventDefault();" class="noselect" style="padding-top: 42.735%; position: relative; user-select: none;"><fieldset class="noselect" style="position: absolute; top: 0px; left: 0px; border: none; outline: none; margin: 0px; padding: 0px; height: 100%; width: 100%; user-select: none;"><fieldset class="noselect" style="position: relative; display: inline-block; padding: 0px; margin: 0px; border: none; outline: none; width: 20%; height: 100%; user-select: none;">     </fieldset><fieldset class="noselect" style="position: relative; display: inline-block; padding: 0px; margin: 0px; border: none; outline: none; width: 26.6667%; height: 100%; user-select: none;"><button id="klawisz53" onmousedown="presspianokey(53);" ontouchstart="presspianokey(53);" onmouseup="releasepianokey(53);" ontouchend="releasepianokey(53);" onmouseleave="releasepianokey(53);" class="whitekeybutton noselect" style="width: 25.5319%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">F</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">3</text></svg></div></div></button><button id="klawisz55" onmousedown="presspianokey(55);" ontouchstart="presspianokey(55);" onmouseup="releasepianokey(55);" ontouchend="releasepianokey(55);" onmouseleave="releasepianokey(55);" class="whitekeybutton noselect" style="width: 24.4681%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">G</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">3</text></svg></div></div></button><button id="klawisz57" onmousedown="presspianokey(57);" ontouchstart="presspianokey(57);" onmouseup="releasepianokey(57);" ontouchend="releasepianokey(57);" onmouseleave="releasepianokey(57);" class="whitekeybutton noselect" style="width: 24.4681%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">A</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">3</text></svg></div></div></button><button id="klawisz59" onmousedown="presspianokey(59);" ontouchstart="presspianokey(59);" onmouseup="releasepianokey(59);" ontouchend="releasepianokey(59);" onmouseleave="releasepianokey(59);" class="whitekeybutton noselect" style="width: 25.5319%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">B</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">3</text></svg></div></div></button><button id="klawisz54" onmousedown="presspianokey(54);" ontouchstart="presspianokey(54);" onmouseup="releasepianokey(54);" ontouchend="releasepianokey(54);" onmouseleave="releasepianokey(54);" class="blackkeybutton noselect" style="width: 14.8936%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; left: 13.8298%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button><button id="klawisz56" onmousedown="presspianokey(56);" ontouchstart="presspianokey(56);" onmouseup="releasepianokey(56);" ontouchend="releasepianokey(56);" onmouseleave="releasepianokey(56);" class="blackkeybutton noselect" style="width: 14.8936%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; left: 42.5532%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button><button id="klawisz58" onmousedown="presspianokey(58);" ontouchstart="presspianokey(58);" onmouseup="releasepianokey(58);" ontouchend="releasepianokey(58);" onmouseleave="releasepianokey(58);" class="blackkeybutton noselect" style="width: 14.8936%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; right: 13.8298%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button></fieldset><fieldset class="noselect" style="position: relative; display: inline-block; padding: 0px; margin: 0px; border: none; outline: none; width: 20%; height: 100%; user-select: none;"><button id="klawisz60" onmousedown="presspianokey(60);" ontouchstart="presspianokey(60);" onmouseup="releasepianokey(60);" ontouchend="releasepianokey(60);" onmouseleave="releasepianokey(60);" class="whitekeybutton noselect" style="width: 32.8571%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">C</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button><button id="klawisz62" onmousedown="presspianokey(62);" ontouchstart="presspianokey(62);" onmouseup="releasepianokey(62);" ontouchend="releasepianokey(62);" onmouseleave="releasepianokey(62);" class="whitekeybutton noselect" style="width: 34.2857%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">D</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button><button id="klawisz64" onmousedown="presspianokey(64);" ontouchstart="presspianokey(64);" onmouseup="releasepianokey(64);" ontouchend="releasepianokey(64);" onmouseleave="releasepianokey(64);" class="whitekeybutton noselect" style="width: 32.8571%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">E</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button><button id="klawisz61" onmousedown="presspianokey(61);" ontouchstart="presspianokey(61);" onmouseup="releasepianokey(61);" ontouchend="releasepianokey(61);" onmouseleave="releasepianokey(61);" class="blackkeybutton noselect" style="width: 20%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; left: 20%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button><button id="klawisz63" onmousedown="presspianokey(63);" ontouchstart="presspianokey(63);" onmouseup="releasepianokey(63);" ontouchend="releasepianokey(63);" onmouseleave="releasepianokey(63);" class="blackkeybutton noselect" style="width: 20%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; right: 20%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button></fieldset><fieldset class="noselect" style="position: relative; display: inline-block; padding: 0px; margin: 0px; border: none; outline: none; width: 26.6667%; height: 100%; user-select: none;"><button id="klawisz65" onmousedown="presspianokey(65);" ontouchstart="presspianokey(65);" onmouseup="releasepianokey(65);" ontouchend="releasepianokey(65);" onmouseleave="releasepianokey(65);" class="whitekeybutton noselect" style="width: 25.5319%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">F</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button><button id="klawisz67" onmousedown="presspianokey(67);" ontouchstart="presspianokey(67);" onmouseup="releasepianokey(67);" ontouchend="releasepianokey(67);" onmouseleave="releasepianokey(67);" class="whitekeybutton noselect" style="width: 24.4681%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">G</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button><button id="klawisz69" onmousedown="presspianokey(69);" ontouchstart="presspianokey(69);" onmouseup="releasepianokey(69);" ontouchend="releasepianokey(69);" onmouseleave="releasepianokey(69);" class="whitekeybutton noselect" style="width: 24.4681%; user-select: none; outline: none; height: 100%; position: relative; margin: 0px; padding: 0px; border: none; border-radius: 0px 0px 4px 4px; cursor: pointer;"><div class="noselect" style="font-family: Arial; position: absolute; bottom: 0px; left: 25%; width: 50%; user-select: none;"><div style="float: left; width: 60%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 20" class="noselect" style="user-select: none;"><text x="0" y="13" fill="black" class="noselect" style="user-select: none;">A</text></svg></div><div style="float: left; width: 40%; user-select: none;" class="noselect"><svg width="100%" height="100%" viewBox="0 0 11 30" class="noselect" style="user-select: none;"><text x="0" y="25" fill="black" class="noselect" style="user-select: none;">4</text></svg></div></div></button> <button id="klawisz66" onmousedown="presspianokey(66);" ontouchstart="presspianokey(66);" onmouseup="releasepianokey(66);" ontouchend="releasepianokey(66);" onmouseleave="releasepianokey(66);" class="blackkeybutton noselect" style="width: 14.8936%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; left: 13.8298%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button><button id="klawisz68" onmousedown="presspianokey(68);" ontouchstart="presspianokey(68);" onmouseup="releasepianokey(68);" ontouchend="releasepianokey(68);" onmouseleave="releasepianokey(68);" class="blackkeybutton noselect" style="width: 14.8936%; user-select: none; outline: none; height: 66.6667%; margin: 0px; padding: 0px; border: none; cursor: pointer; position: absolute; top: 0px; border-radius: 0px 0px 3px 3px; left: 42.5532%;"><fieldset class="blackinkey noselect" style="height: 88%; margin: 0px 8%; padding: 0px; border: none; outline: none; background: inherit; box-shadow: rgb(119, 119, 119) 0px 2px 1px 0px; user-select: none;"></fieldset></button> </fieldset><fieldset class="noselect" style="display: inline-block; padding: 0px; margin: 0px; border: none; outline: none; width: 6.66667%; height: 100%; user-select: none;"> </fieldset></fieldset></div></div><div id="podreklama" class="noselect" style="user-select: none;"></div></div></div>
+ <div id="reklama1" onmouseenter="detectad(1);">
+  <!-- piano-2016-10-03 -->
+  <ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-5700139411406455" data-ad-slot="8676335215" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:732px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:732px;background-color:transparent;"><iframe width="732" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:732px;height:90px;"></iframe></ins></ins></ins>
+ </div>
+<div id="advanced" style="display: none;"><div class="noselect" style="text-align: center; user-select: none;"><fieldset class="noselect" style="display: inline-block; border: none; margin: 0.5em; padding: 0px; user-select: none;"><input type="checkbox" id="rechord" onchange="rechordonchange();" class="noselect" style="user-select: none;"><span id="CHORDtext" class="noselect" style="user-select: none;">CHORD</span></fieldset><fieldset class="noselect" style="display: inline-block; border: none; margin: 0.5em; padding: 0px; user-select: none;"><input type="checkbox" id="recordbox" onchange="recordonchange();" class="noselect" style="user-select: none;"><span id="RECORDtext" class="noselect" style="user-select: none;">RECORD</span><input type="text" id="starttime" class="noselect" style="display: none; user-select: none;"><button id="playbackbutton" disabled="" onclick="startplayback();" class="noselect" style="display: none; user-select: none;">playback</button></fieldset><form action="download.php" method="post" target="_blank" class="noselect" style="display: inline-block; user-select: none;"><textarea id="chordstextarea" name="outputarea" class="noselect" style="display: none; user-select: none;"></textarea><button id="savebutton" class="przycisk noselect" disabled="" onclick="galog(&quot;save&quot;,&quot;save&quot;);document.getElementById(&quot;chordstextarea&quot;).value=document.getElementById(&quot;memorybuttons&quot;).innerHTML;return true;" style="user-select: none;">save</button></form><label class="przycisk noselect" style="user-select: none;"><span id="loadtext" class="noselect" style="user-select: none;">load</span><input id="loadchordsinput" type="file" size="1" class="noselect" style="display: none; user-select: none;"></label><button id="popupguzik" class="przycisk noselect" onclick="openpopup();" style="user-select: none;">popup window</button></div><div id="memorybuttons" ondrop="drop(event)" ondragover="allowDrop(event)" ontouchstart="preventZoom(event);" ontouchmove="event.preventDefault();" class="noselect" style="margin-top: 0.5em; position: relative; resize: both; overflow: auto; border: 1px dotted darkgray; min-height: 7em; user-select: none;">tick the CHORD and RECORD checkboxes on and off<br class="noselect" style="user-select: none;">to create chord buttons and playback buttons here</div><textarea id="recordedsounds" class="noselect" style="display: none; user-select: none;"></textarea></div></div>
+</td> <!-- lewakolumna -->
+<td id="prawakolumna" onmouseenter="detectad(3);" style="display: none;"><div id="skyscraper">
+
+<!-- piano-2017-02-23-skyscraper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-5700139411406455" data-ad-slot="5497778810" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe width="300" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:300px;height:600px;"></iframe></ins></ins></ins>
+</div></td>
+</tr></tbody></table></div><!--structurecontainer-->
+
+<main>
+
+<div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="script.js"></script>
+      <title>Speech to text converter in JS</title>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" />
+
+
+
+</div>
+
+<div>
+  <body>
+      <h4 align="center">Speech to text converter in JS</h4>
+      <div id="result"></div>
+      <button onclick="startConverting();"><i class="fa fa-microphone"></i></button>
+
+      <audio id="guitarTrack1">
+          <source src="bassGuitar.wav" type="audio/wav">
+      </audio>
+      <audio id="guitarTrack2">
+          <source src="funkGuitar.wav" type="audio/wav">
+      </audio>
+      <audio id="guitarTrack3">
+          <source src="jazzGuitar.wav" type="audio/wav">
+      </audio>
+
+
+      <script type="text/javascript">
+
+         // var a = document.getElementById("guitarTrack1");
+          var guitarTrack1 = document.getElementById("guitarTrack1");
+          var guitarTrack2 = document.getElementById("guitarTrack2");
+          var guitarTrack3 = document.getElementById("guitarTrack3");
+
+  		var r = document.getElementById('result');
+
+  		function playTrack1() {
+  		     guitarTrack1.play();
+  		}
+  		function playTrack2() {
+  		    guitarTrack2.play();
+  		}
+  		function playTrack3() {
+  		    guitarTrack3.play();
+  		}
+
+  		function startConverting () {
+  			if('webkitSpeechRecognition' in window){
+  				var speechRecognizer = new webkitSpeechRecognition();
+  				speechRecognizer.continuous = true;
+  				speechRecognizer.interimResults = true;
+  				speechRecognizer.lang = 'en-IN';
+  				speechRecognizer.start();
+
+  				var finalTranscripts = '';
+
+  				speechRecognizer.onresult = function(event){
+  					var interimTranscripts = '';
+  					for(var i = event.resultIndex; i < event.results.length; i++){
+  						var transcript = event.results[i][0].transcript;
+  						transcript.replace("\n", "<br>");
+  						if(event.results[i].isFinal){
+  							finalTranscripts += transcript;
+  						}else{
+  							interimTranscripts += transcript;
+  						}
+  					}
+  					r.innerHTML = finalTranscripts + '<span style="color:#999">' + interimTranscripts + '</span>';
+  					if (interimTranscripts === "1") {
+  					    playTrack1();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "2") {
+  					    playTrack2();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "3") {
+  					    playTrack3();
+  					    startConverting();
+  					}
+  				};
+  				speechRecognizer.onerror = function (event) {
+  				};
+  			}else{
+  				r.innerHTML = 'Your browser is not supported. If google chrome, please upgrade!';
+  			}
+  		}
+
+
+
+      </script>
+  </body>
+</div>
+
+
+
+
+</main>
+
+<aside style="font-family: Verdana; font-size: small; text-align: center; margin-top: 2em;">
+<div lang="ru" style="display: inline-block; background-color: rgb(240,240,240); box-shadow: 0 0 0.5em 0.5em rgb(240,240,240);">
+</div>
+<div lang="es" style="display: inline-block; background-color: rgb(240,240,240); box-shadow: 0 0 0.5em 0.5em rgb(240,240,240);">
+</div>
+</aside>
+
+
+</body>
+</html>
