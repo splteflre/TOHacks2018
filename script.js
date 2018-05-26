@@ -9,6 +9,9 @@ document.addEventListener('keydown', function (e) {
     if (e.keyCode == 32) {
         startConverting();
     }
+    if(e.keyCode == 81){ //play intro video
+        playIntro();
+    }
     if (e.keyCode == 65) { //C
         playAudioA();
     }

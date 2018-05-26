@@ -90,62 +90,65 @@ main h2 { font-family: "Times New Roman"; }
           <source src="jazzGuitar.wav" type="audio/wav">
       </audio>
       <audio id="A">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-a_A_major.wav" type="audio/wav">
+          <source src="piano-a_A_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
-
+      <audio id="intro">
+          <source src="tutorial.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
       <audio id="Bb">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-bb_A_major.wav" type="audio/wav">
+          <source src="piano-bb_A_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="B">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-b_B_major.wav" type="audio/wav">
+          <source src="piano-b_B_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="C">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-c_C_major.wav" type="audio/wav">
+          <source src="piano-c_C_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="C#">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-c_C#_major.wav" type="audio/wav">
+          <source src="piano-c_C#_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="D">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-d_D_major.wav" type="audio/wav">
+          <source src="piano-d_D_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="D#">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-eb_D#_major.wav" type="audio/wav">
+          <source src="piano-eb_D#_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
       <audio id="E">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-e_E_major.wav" type="audio/wav">
+          <source src="piano-e_E_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="F">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-f_F_major.wav" type="audio/wav">
+          <source src="piano-f_F_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="F#">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-f_F#_major.wav" type="audio/wav">
+          <source src="piano-f_F#_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="G">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-g_G_major.wav" type="audio/wav">
+          <source src="piano-g_G_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="G#">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-g_G#_major.wav" type="audio/wav">
+          <source src="piano-g_G#_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="A5">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\A5.wav" type="audio/wav">
+          <source src="A5.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
@@ -156,6 +159,7 @@ main h2 { font-family: "Times New Roman"; }
           var guitarTrack1 = document.getElementById("guitarTrack1");
           var guitarTrack2 = document.getElementById("guitarTrack2");
           var guitarTrack3 = document.getElementById("guitarTrack3");
+          var intro = document.getElementById("intro");
           var a = document.getElementById("A");
           var bb = document.getElementById("Bb");
           var b = document.getElementById("B");
@@ -169,6 +173,10 @@ main h2 { font-family: "Times New Roman"; }
           var g = document.getElementById("G");
           var gs = document.getElementById("G#");
           var aa = document.getElementById("A5");
+
+          function playIntro(){
+              intro.play();
+          }
 
           function playAudioA() {
               a.play();
