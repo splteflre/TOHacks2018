@@ -15,10 +15,10 @@ if(e.keyCode == 87){ //D
   if(e.keyCode == 83){ //E
     playAudioB();
   }
-  if(e.keyCode == 68){ //F
+  if(e.keyCode == 68){
     playAudioC();
   }
- if(e.keyCode == 82){ //G
+ if(e.keyCode == 82){
     playAudioCs();
   }
   if(e.keyCode == 70){
