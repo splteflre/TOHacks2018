@@ -89,14 +89,15 @@ main h2 { font-family: "Times New Roman"; }
       <audio id="guitarTrack3">
           <source src="jazzGuitar.wav" type="audio/wav">
       </audio>
-      <audio id="A">
-          <source src="piano-a_A_major.wav" type="audio/wav">
-          Your browser does not support the audio element.
-      </audio>
       <audio id="intro">
           <source src="tutorial.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
+      <audio id="A">
+          <source src="piano-a_A_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+
       <audio id="Bb">
           <source src="piano-bb_A_major.wav" type="audio/wav">
           Your browser does not support the audio element.
@@ -113,7 +114,7 @@ main h2 { font-family: "Times New Roman"; }
       </audio>
 
       <audio id="C#">
-          <source src="piano-c_C#_major.wav" type="audio/wav">
+          <source src="C#.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
@@ -123,7 +124,7 @@ main h2 { font-family: "Times New Roman"; }
       </audio>
 
       <audio id="D#">
-          <source src="piano-eb_D#_major.wav" type="audio/wav">
+          <source src="D#.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
 
@@ -132,26 +133,45 @@ main h2 { font-family: "Times New Roman"; }
           Your browser does not support the audio element.
       </audio>
       <audio id="F">
-          <source src="piano-f_F_major.wav" type="audio/wav">
+          <source src="F.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="F#">
-          <source src="piano-f_F#_major.wav" type="audio/wav">
+          <source src="piano-f_F_major.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="G">
-          <source src="piano-g_G_major.wav" type="audio/wav">
+          <source src="G.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="G#">
-          <source src="piano-g_G#_major.wav" type="audio/wav">
+          <source src="G#.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
       <audio id="A5">
           <source src="A5.wav" type="audio/wav">
           Your browser does not support the audio element.
       </audio>
-
+      <audio id="sax1">
+          <source src="sax1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+      <audio id="sax2">
+          <source src="sax2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+      <audio id="drum1">
+          <source src="drum1.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+      <audio id="drum2">
+          <source src="drum2.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+      <audio id="drum3">
+          <source src="drum3.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
 
       <script type="text/javascript">
 
@@ -173,9 +193,30 @@ main h2 { font-family: "Times New Roman"; }
           var g = document.getElementById("G");
           var gs = document.getElementById("G#");
           var aa = document.getElementById("A5");
+          var drum1 = document.getElementById("drum1");
+          var drum2 = document.getElementById("drum2");
+          var drum3 = document.getElementById("drum3");
+          var sax1 = document.getElementById("sax1");
+          var sax2 = document.getElementById("sax2");
 
-          function playIntro(){
-              intro.play();
+          function playDrum1() {
+              drum1.play();
+          }
+
+          function playDrum2() {
+              drum2.play();
+          }
+
+          function playDrum3() {
+              drum3.play();
+          }
+
+          function playSax1() {
+              sax1.play();
+          }
+
+          function playSax2() {
+              sax2.play();
           }
 
           function playAudioA() {
@@ -193,19 +234,15 @@ main h2 { font-family: "Times New Roman"; }
           function playAudioC() {
               c.play();
           }
-
           function playAudioCs() {
               cs.play();
           }
-
           function playAudioD() {
               d.play();
           }
-
           function playAudioDs() {
               ds.play();
           }
-
           function playAudioE() {
               e.play();
           }
@@ -223,6 +260,12 @@ main h2 { font-family: "Times New Roman"; }
           }
           function playAudioAA() {
               aa.play();
+          }
+          function playIntro(){
+              intro.play();
+          }
+          function playAudioA() {
+              a.play();
           }
 
   		var r = document.getElementById('result');
@@ -269,6 +312,26 @@ main h2 { font-family: "Times New Roman"; }
   					}
   					else if (interimTranscripts === "3") {
   					    playTrack3();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "4") {
+  					    playDrum1();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "5") {
+  					    playDrum2();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "6") {
+  					    playDrum3();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "7") {
+  					    playSax1();
+  					    startConverting();
+  					}
+  					else if (interimTranscripts === "8") {
+  					    playSax2();
   					    startConverting();
   					}
   				};
