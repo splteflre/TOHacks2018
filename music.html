@@ -1,32 +1,92 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="musicKeys.js"></script>
+      <script src="musicKeys.js"></script>
+      <script src="jquery-3.3.1.min.js"></script>
 
 
         <body>
 
         <audio id="myAudio">
-          <source src="horse.ogg" type="audio/ogg">
-          <source src="horse.mp3" type="audio/mpeg">
+          <source src="C:\Users\Linda\Downloads\doorbell-2.wav" type="audio/wav">
+          <!source src="C:\Users\Linda\Downloads\doorbell-2.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
 
+        <audio id="C">
+          <source src="C:\Users\Linda\Downloads\piano-c_C_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="D">
+          <source src="C:\Users\Linda\Downloads\piano-d_D_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="E">
+          <source src="C:\Users\Linda\Downloads\piano-e_E_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="F">
+          <source src="C:\Users\Linda\Downloads\piano-f_F_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="G">
+          <source src="C:\Users\Linda\Downloads\piano-g_G_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+
+
         <p>Click the buttons to play or pause the audio.</p>
 
-        <button onclick="playAudio()" type="button">Play Audio</button>
-        <button onclick="pauseAudio()" type="button">Pause Audio</button>
+        <!button onclick="playAudio()" type="button">Play Audio</button>
+        <!button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+
+
+
 
         <script>
+
+
         var x = document.getElementById("myAudio");
+        var c = document.getElementById("C");
+        var d = document.getElementById("D");
+        var e = document.getElementById("E");
+        var f = document.getElementById("F");
+        var g = document.getElementById("G");
 
         function playAudio() {
             x.play();
         }
 
+        function playAudioC() {
+            c.play();
+        }
+
+        function playAudioD() {
+            d.play();
+        }
+
+        function playAudioE() {
+            e.play();
+        }
+
+        function playAudioF() {
+            f.play();
+        }
+
+        function playAudioG() {
+            g.play();
+        }
+
         function pauseAudio() {
             x.pause();
         }
+
         </script>
 
         </body>
