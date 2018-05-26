@@ -7,8 +7,18 @@
 
         <body>
 
-        <audio id="myAudio">
-          <source src="C:\Users\Linda\Downloads\doorbell-2.wav" type="audio/wav">
+        <audio id="A">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-a_A_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="Bb">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-bb_A_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="B">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-b_B_major.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
 
@@ -17,8 +27,18 @@
           Your browser does not support the audio element.
         </audio>
 
+        <audio id="C#">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-c_C#_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
         <audio id="D">
           <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-d_D_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <audio id="D#">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-eb_D#_major.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
 
@@ -26,14 +46,24 @@
           <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-e_E_major.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
-
         <audio id="F">
           <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-f_F_major.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
-
+        <audio id="F#">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-f_F#_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
         <audio id="G">
-          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-g_G_major.wav.wav" type="audio/wav">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-g_G_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        <audio id="G#">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\piano-g_G#_major.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        <audio id="A5">
+          <source src="C:\Users\Linda\Documents\U of T Engineering\2017\TOHacks2018\TOHacks2018\A5.wav" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
 
@@ -47,43 +77,68 @@
 
 
 
-
         <script>
 
 
-        var x = document.getElementById("myAudio");
+        var a = document.getElementById("A");
+        var bb = document.getElementById("Bb");
+        var b = document.getElementById("B");
         var c = document.getElementById("C");
+        var cs = document.getElementById("C#");
         var d = document.getElementById("D");
+        var ds = document.getElementById("D#");
         var e = document.getElementById("E");
         var f = document.getElementById("F");
+        var fs = document.getElementById("F#");
         var g = document.getElementById("G");
+        var gs = document.getElementById("G#");
+        var aa = document.getElementById("A5");
 
-        function playAudio() {
-            x.play();
+        function playAudioA() {
+            a.play();
+        }
+
+        function playAudioBb() {
+            bb.play();
+        }
+
+        function playAudioB() {
+            b.play();
         }
 
         function playAudioC() {
             c.play();
         }
 
+        function playAudioCs() {
+            cs.play();
+        }
+
         function playAudioD() {
             d.play();
+        }
+
+        function playAudioDs() {
+            ds.play();
         }
 
         function playAudioE() {
             e.play();
         }
-
         function playAudioF() {
             f.play();
         }
-
+        function playAudioFs() {
+            fs.play();
+        }
         function playAudioG() {
             g.play();
         }
-
-        function pauseAudio() {
-            x.pause();
+        function playAudioGs() {
+            gs.play();
+        }
+        function playAudioAA() {
+            aa.play();
         }
 
         </script>
